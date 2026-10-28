@@ -1,0 +1,276 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.title-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.title-link:hover {
+    color: #3498db;
+}
+
+
+
+a {
+    text-decoration: none;
+    color:#3498db;
+}
+
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Advertisement Container */
+.ad-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ad-container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.ad-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+}
+
+.ad-container img:hover {
+    opacity: 0.9;
+}
+
+.ad-notice {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.ad-notice a {
+    color: #999;
+    text-decoration: none;
+}
+
+.ad-notice a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Changelog Table */
+.changelog-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.changelog-table thead {
+    background-color: #3498db;
+    color: white;
+}
+
+.changelog-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.changelog-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.changelog-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.changelog-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-links .separator {
+    color: #7f8c8d;
+}
+
+.footer-copyright {
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+        flex: 1;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+    
+    .ad-container {
+        margin-bottom: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+    
+
+
+    /* Make table responsive on mobile */
+    .changelog-table thead {
+        display: none;
+    }
+
+    .changelog-table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+
+    .changelog-table td {
+        display: block;
+        text-align: right;
+        padding: 0.5rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .changelog-table td:last-child {
+        border-bottom: none;
+    }
+
+    .changelog-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+}
